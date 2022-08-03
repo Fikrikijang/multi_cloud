@@ -26,10 +26,11 @@ class PageApi {
 
   Future<bool> deletePage(id) async {
     final response = await http.delete(
-        Uri.parse('http://10.107.73.251:8081/page/deletePage/$id'),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        });
+      Uri.parse('http://10.107.73.251:8081/page/deletePage/$id'),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    );
     if (response.statusCode == 200) {
       return true;
     } else {
